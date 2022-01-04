@@ -13,21 +13,21 @@ class DeveloperTest < ActiveSupport::TestCase
   end
 
   test "available in a future date" do
-    @developer.available_on = Date.today + 2.weeks
+    @developer.available_on = Date.current + 2.weeks
 
     assert_equal "in_future", @developer.availability_status
     assert @developer.available_in_future?
   end
 
   test "available from a past date" do
-    @developer.available_on = Date.today - 3.weeks
+    @developer.available_on = Date.current - 3.weeks
 
     assert_equal "now", @developer.availability_status
     assert @developer.available_now?
   end
 
   test "available from today" do
-    @developer.available_on = Date.today
+    @developer.available_on = Date.current
 
     assert_equal "now", @developer.availability_status
     assert @developer.available_now?
@@ -122,7 +122,7 @@ class DeveloperTest < ActiveSupport::TestCase
   test "successful profile creation sends a notification to the admins" do
     user = users(:without_profile)
 
-    assert_changes "Notification.count", 1 do
+    assert_difference "Notification.count", 1 do
       Developer.create!(name: "name", hero: "hero", bio: "bio", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management", user: user)
     end
 
