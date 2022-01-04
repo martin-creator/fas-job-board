@@ -28,6 +28,10 @@ class UserMenu::SignedInComponent < ApplicationComponent
   def admin?
     user.admin?
   end
+
+  def unread_notifications?
+    user.notifications.unread.any?
+  end
 end
 
 def unread_notifications?
