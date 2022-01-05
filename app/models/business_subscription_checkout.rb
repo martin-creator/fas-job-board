@@ -18,6 +18,7 @@ class BusinessSubscriptionCheckout
     user.set_payment_processor(:stripe)
     user.payment_processor.checkout(
       mode: "subscription",
+      allow_promotion_codes: true,
       line_items: business_subscription_price_id,
       success_url: success_url
     )
