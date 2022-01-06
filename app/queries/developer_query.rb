@@ -10,19 +10,19 @@ class DeveloperQuery
   end
 
   def available?
-    return nil if options[:available] == ""
+    return nil if options[:available].blank?
 
     options[:available]
   end
 
   def search_field
-    return nil if options[:search_field] == ""
+    return nil if options[:search_field].blank?
 
     options[:search_field]
   end
 
   def search_status
-    return nil if options[:search_status] == ""
+    return nil if options[:search_status].blank?
 
     options[:search_status]
   end
