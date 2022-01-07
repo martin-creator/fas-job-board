@@ -5,10 +5,15 @@ class DevelopersController < ApplicationController
   before_action :require_new_developer!, only: %i[new create]
 
   def index
-    developers = Developer
-      .includes(:role_type).with_attached_avatar
-      .most_recently_added
-    @pagy, @developers = pagy(developers)
+    if params[:search]
+      @query = DeveloperQuery.new(search_params)
+    else
+      developers = Developer
+        .includes(:role_type).with_attached_avatar
+        .most_recently_added
+
+      @pagy, @developers = pagy(developers)
+    end
   end
 
   def new
@@ -81,6 +86,14 @@ class DevelopersController < ApplicationController
         :full_time_contract,
         :full_time_employment
       ]
+    )
+  end
+
+  def search_params
+    params.require(:search).permit(
+      :search_field,
+      :job_type,
+      :availability
     )
   end
 end

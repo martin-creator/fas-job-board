@@ -8,13 +8,31 @@
       <%= t(".ror_developers") %>
     </h3>
   </div>
+  <%= render SearchComponent.new %>
+
+  <% if @pagy.present? %>
+    <%= render PagyPaginatorComponent.new(id: "developers",
+          pagy: @pagy,
+          url_array: [:developers],
+          container_classes: "space-y-8") do |component| %>
+        <% component.loading_icon do %>
+          <%= render LoadingComponent.new %>
+        <% end %>
+
+      <%= render DeveloperCardComponent.with_collection(@developers) %>
+    <% end %>
+  <% end %>
+
+  <% if @query.present? %>
   <%= render PagyPaginatorComponent.new(id: "developers",
-        pagy: @pagy,
+        pagy: @query.pagy,
         url_array: [:developers],
         container_classes: "space-y-8") do |component| %>
-    <% component.loading_icon do %>
-      <%= render LoadingComponent.new %>
-    <% end %>
-    <%= render DeveloperCardComponent.with_collection(@developers) %>
+      <% component.loading_icon do %>
+        <%= render LoadingComponent.new %>
+      <% end %>
+
+    <%= render DeveloperCardComponent.with_collection(@query.records) %>
   <% end %>
+<% end %>
 </div>
