@@ -92,7 +92,7 @@ class DevelopersController < ApplicationController
   def search_params
     params.require(:search).permit(
       :search_field,
-      :search_status,
+      :job_type,
       :availability
     )
   end

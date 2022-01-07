@@ -9,10 +9,10 @@ class DeveloperQuery
     @options = options
   end
 
-  def available?
-    return nil if options[:available].blank?
+  def available
+    return nil if options[:availability].blank?
 
-    options[:available]
+    options[:availability]
   end
 
   def search_field
@@ -21,10 +21,10 @@ class DeveloperQuery
     options[:search_field]
   end
 
-  def search_status
-    return nil if options[:search_status].blank?
+  def job_type
+    return nil if options[:job_type].blank?
 
-    options[:search_status]
+    options[:job_type]
   end
 
   def pagy
@@ -40,35 +40,51 @@ class DeveloperQuery
   def initialize_pagy
     records = Developer.most_recently_added.with_attached_avatar
 
-    if available? && search_field && search_status
-      records = records.where("technical_skills LIKE ? OR pivot_skills LIKE ? AND search_status = ?", "%#{search_field}%", "%#{search_field}%", "%#{search_status}%")
-      records = records.available
+    if available && search_field && job_type
+      records = records
+        .joins(:role_type)
+        .where("technical_skills LIKE ?", "%#{search_field}%")
+        .or(records.where("pivot_skills LIKE ?", "%#{search_field}%"))
+        .and(records.where(role_type: {"#{job_type}": true}))
+        .and(records.where(search_status: available))
     end
 
-    if available? && search_field
-      records = records.where("technical_skills LIKE ? OR pivot_skills LIKE ?", "%#{search_field}%", "%#{search_field}%")
-      records = records.available
+    if available && search_field
+      records = records
+        .where("technical_skills LIKE ?", "%#{search_field}%")
+        .or(records.where("pivot_skills LIKE ?", "%#{search_field}%"))
+        .and(records.where(search_status: available))
     end
 
-    if available? && search_status
-      records = records.where("search_status = ?", "%#{search_status}%")
-      records = records.available
+    if available && job_type
+      records = records
+        .joins(:role_type)
+        .where(role_type: {"#{job_type}": true})
+        .and(records.where(search_status: available))
     end
 
-    if available?
-      records = records.available
+    if available
+      records = records.where(search_status: available)
     end
 
-    if search_field && search_status
-      records = records.where("technical_skills LIKE ? OR pivot_skills LIKE ? AND search_status = ?", "%#{search_field}%", "%#{search_field}%", "%#{search_status}%")
+    if search_field && job_type
+      records = records
+        .joins(:role_type)
+        .where("technical_skills LIKE ?", "%#{search_field}%")
+        .or(records.where("pivot_skills LIKE ?", "%#{search_field}%"))
+        .and(records.where(role_type: {"#{job_type}": true}))
     end
 
     if search_field
-      records = records.where("technical_skills LIKE ? OR pivot_skills LIKE ?", "%#{search_field}%", "%#{search_field}%")
+      records = records
+        .where("technical_skills LIKE ?", "%#{search_field}%")
+        .or(records.where("pivot_skills LIKE ?", "%#{search_field}%"))
     end
 
-    if search_status
-      records = records.where("search_status = ?", "%#{search_status}%")
+    if job_type
+      records = records
+        .joins(:role_type)
+        .where(role_type: {"#{job_type}": true})
     end
 
     @pagy, @records = build_pagy(records)
