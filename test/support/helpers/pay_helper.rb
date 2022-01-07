@@ -9,6 +9,7 @@ module PayHelper
       payment_processor = Minitest::Mock.new
       payment_processor.expect(:checkout, checkout, [{
         mode: "subscription",
+        allow_promotion_codes: true,
         line_items: "price_FAKE_PRICE_ID_FOR_TESTS",
         success_url: expected_success_url
       }])
