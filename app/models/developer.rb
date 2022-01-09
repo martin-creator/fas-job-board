@@ -37,8 +37,13 @@ class Developer < ApplicationRecord
 
   validates :pivot_skills, format: {with: @skills_regex, multiline: true}
 
-  scope :available, -> { where("available_on <= ?", Date.today) }
-  scope :most_recently_added, -> { order(created_at: :desc) }
+  scope :filter_by_utc_offset, ->(utc_offset) { where(utc_offset: utc_offset) }
+  scope :filter_by_hourly_rate, ->(hourly_rate) { where(preferred_min_hourly_rate: ..hourly_rate) }
+  scope :filter_by_salary, ->(salary) { where(preferred_min_salary: ..salary) }
+
+  scope :available, -> { where(available_on: ..Time.current.to_date) }
+  scope :newest_first, -> { order(created_at: :desc) }
+  scope :available_first, -> { where.not(available_on: nil).order(:available_on) }
 
   after_create_commit :send_admin_notification
 

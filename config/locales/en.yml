@@ -96,6 +96,22 @@ en:
       with: with
   cover_image_component:
     alt: Developer's cover image
+  developer_query_component:
+    apply: Apply
+    budget:
+      currency: USD
+      hourly: Max. hourly rate
+      per_hour: "/hr"
+      salary: Max. salary
+      title: Budget
+    gmt: GMT
+    sort:
+      availability: Availability
+      newest: Newest
+      title: Sort
+    timezone:
+      title: Timezone
+    title: Developer filters
   developers:
     create:
       created: Your profile was added!
@@ -137,9 +153,12 @@ en:
         help_text: What kind of work are you looking for next?
         title: Work preferences
     index:
-      ror_developers: Second career developers
+      cta: Add my profile
+      description: Dozens of second career developers looking for their next gig. Juniors to seniors and everyone in between, you'll find them all here.
+      title: Developers with Pivot Skills
     show:
       description: Description
+      edit: Edit
       hire: Hire me
     update:
       updated: Your profile was updated!
@@ -153,6 +172,7 @@ en:
       available_developers: Developers available now
       get_started: Get started
       learn_more: Learn more
+      more: See more developers
       subtitle_1: hirethePIVOT
       subtitle_2: empowers second career developers to find work.
       subtitle_3: 'Second career developers have a superpower:'
@@ -160,7 +180,6 @@ en:
       subtitle_5: Find and hire these superheroes for your company.
       title_1: The reverse job board for
       title_2: Second Career Developers
-      view_more_developers: View more developers
   messages:
     form:
       help: Add your message

@@ -1,5 +1,5 @@
 <% content_for :open_graph_tags do %>
-  <%= render OpenGraphTagsComponent.new %>
+  <%= render OpenGraphTagsComponent.new(image: image_url("logo.png")) %>
 <% end %>
 
 <div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
@@ -34,13 +34,13 @@
     </h3>
   </div>
 
-  <div class="space-y-8">
+  <div class="shadow overflow-hidden sm:rounded-md divide-y divide-gray-200">
     <%= render DeveloperCardComponent.with_collection(@developers) %>
   </div>
 
   <div class="mt-8 mb-16 text-right mr-2 lg:mr-0">
     <%= link_to developers_path, class: "inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gradient-to-t from-orange-300 via-orange-300 to-yellow-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" do %>
-      <%= t(".view_more_developers") %>
+      <%= t(".more") %>
       <%= inline_svg_tag "icons/outline/arrow_right_circle.svg", class: "ml-3 -mr-1 h-5 2-5" %>
     <% end %>
   </div>
