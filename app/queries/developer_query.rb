@@ -38,7 +38,7 @@ class DeveloperQuery
   private
 
   def initialize_pagy
-    records = Developer.most_recently_added.with_attached_avatar
+    records = Developer.newest_first.with_attached_avatar
 
     if available && search_field && job_type
       records = records
