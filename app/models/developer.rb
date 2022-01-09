@@ -37,7 +37,7 @@ class Developer < ApplicationRecord
 
   validates :pivot_skills, format: {with: @skills_regex, multiline: true}
 
-  scope :filter_by_utc_offset, ->(utc_offset) { where(utc_offset: utc_offset) }
+  scope :filter_by_utc_offset, ->(utc_offset) { where(utc_offset:) }
   scope :filter_by_hourly_rate, ->(hourly_rate) { where(preferred_min_hourly_rate: ..hourly_rate) }
   scope :filter_by_salary, ->(salary) { where(preferred_min_salary: ..salary) }
 

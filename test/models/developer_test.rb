@@ -35,7 +35,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "is valid" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: "Foo", hero: "Bar", bio: "FooBar", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management")
 
     assert developer.valid?
   end
@@ -49,7 +49,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "invalid without name" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: nil)
+    developer = Developer.new(user:, name: nil)
 
     refute developer.valid?
     assert_not_nil developer.errors[:name]
@@ -57,7 +57,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "invalid without hero" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, hero: nil)
+    developer = Developer.new(user:, hero: nil)
 
     refute developer.valid?
     assert_not_nil developer.errors[:hero]
@@ -65,7 +65,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "invalid without bio" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, bio: nil)
+    developer = Developer.new(user:, bio: nil)
 
     refute developer.valid?
     assert_not_nil developer.errors[:bio]
@@ -73,21 +73,21 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "is valid with pivot skills and technical skills" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails")
 
     assert developer.valid?
   end
 
   test "removes blank entries for pivot skills" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, ,writing, ", technical_skills: "Ruby, Rails")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, ,writing, ", technical_skills: "Ruby, Rails")
 
     assert developer.pivot_skills = ["customer relations", "writing"]
   end
 
   test "removes blank entries for technical skills" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, ,Rails, Python, ")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, ,Rails, Python, ")
 
     assert developer.technical_skills = ["Ruby", "Rails", "Python"]
   end
@@ -123,7 +123,7 @@ class DeveloperTest < ActiveSupport::TestCase
     user = users(:without_profile)
 
     assert_difference "Notification.count", 1 do
-      Developer.create!(name: "name", hero: "hero", bio: "bio", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management", user: user)
+      Developer.create!(name: "name", hero: "hero", bio: "bio", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management", user:)
     end
 
     assert_equal Notification.last.type, NewDeveloperProfileNotification.name
@@ -184,7 +184,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "invalid with twitter full URL" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, twitter: "https://twitter.com/hirethepivot")
+    developer = Developer.new(user:, twitter: "https://twitter.com/hirethepivot")
 
     refute developer.valid?
     assert_not_nil developer.errors[:twitter]
@@ -192,7 +192,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "invalid with linkedin full URL" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, twitter: "https://www.linkedin.com")
+    developer = Developer.new(user:, twitter: "https://www.linkedin.com")
 
     refute developer.valid?
     assert_not_nil developer.errors[:linkedin]
@@ -200,7 +200,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "invalid with github full URL" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, twitter: "github.com")
+    developer = Developer.new(user:, twitter: "github.com")
 
     refute developer.valid?
     assert_not_nil developer.errors[:github]
@@ -208,21 +208,21 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "is valid with github username" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", github: "rails")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", github: "rails")
 
     assert developer.valid?
   end
 
   test "is valid with linkedin username" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", linkedin: "ruby")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", linkedin: "ruby")
 
     assert developer.valid?
   end
 
   test "is valid with twitter username" do
     user = users(:with_available_profile)
-    developer = Developer.new(user: user, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", twitter: "hirethepivot")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", twitter: "hirethepivot")
 
     assert developer.valid?
   end

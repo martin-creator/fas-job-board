@@ -59,5 +59,5 @@ business = Business.create!(
 business.user.set_payment_processor(:fake_processor, allow_fake: true)
 business.user.payment_processor.subscribe(plan: "hirethepivot")
 
-conversation = Conversation.create!(developer: developer, business: business)
-Message.create!(conversation: conversation, sender: business, body: "Let's work together, Dennis!")
+conversation = Conversation.create!(developer:, business:)
+Message.create!(conversation:, sender: business, body: "Let's work together, Dennis!")
