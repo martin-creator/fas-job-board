@@ -1,6 +1,10 @@
 <%= tag.div id: id, class: container_classes do %>
-    <%= content %>
-  <% end %>
+  <%= content %>
+<% end %>
+
+<%= pagy_links do %>
+  <%== pagy_nav pagy %>
+<% end %>
 
   <div class="mt-8">
     <%= pagy_links do %>

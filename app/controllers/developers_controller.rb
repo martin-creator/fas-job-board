@@ -10,7 +10,6 @@ class DevelopersController < ApplicationController
     else
       developers = Developer
         .includes(:role_type).with_attached_avatar
-        .most_recently_added
 
       @pagy, @developers = pagy(developers)
     end

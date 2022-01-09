@@ -298,6 +298,8 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     ruby-progressbar (1.11.0)
+    scout_apm (5.1.1)
+      parser
     sidekiq (6.3.1)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
@@ -372,6 +374,7 @@ DEPENDENCIES
   rails (~> 7.0)
   redcarpet (~> 3.5)
   redis
+  scout_apm (~> 5.1)
   sidekiq (~> 6.3)
   sprockets-rails (~> 3.4)
   standard
