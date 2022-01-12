@@ -7,7 +7,7 @@ Pay.setup do |config|
   config.send_emails = true
 
   config.default_product_name = "hirethepivot"
-  config.default_plan_name = "Business subscription"
+  config.default_plan_name = "Business Plan"
 
   config.automount_routes = true
   config.routes_path = "/pay"
