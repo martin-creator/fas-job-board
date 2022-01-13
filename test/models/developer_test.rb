@@ -213,7 +213,7 @@ class DeveloperTest < ActiveSupport::TestCase
       name: "Name",
       hero: "Hero",
       bio: "Bio",
-      pivot_skills: "customer relations, writing", 
+      pivot_skills: "customer relations, writing",
       technical_skills: "Ruby, Rails",
       avatar: active_storage_blobs(:one),
       time_zone: "Pacific Time (US & Canada)"
