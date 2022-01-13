@@ -35,7 +35,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "is valid" do
     user = users(:with_available_profile)
-    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management")
 
     assert developer.valid?
   end
@@ -73,21 +73,21 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "is valid with pivot skills and technical skills" do
     user = users(:with_available_profile)
-    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails")
 
     assert developer.valid?
   end
 
   test "removes blank entries for pivot skills" do
     user = users(:with_available_profile)
-    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, ,writing, ", technical_skills: "Ruby, Rails")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, ,writing, ", technical_skills: "Ruby, Rails")
 
     assert developer.pivot_skills = ["customer relations", "writing"]
   end
 
   test "removes blank entries for technical skills" do
     user = users(:with_available_profile)
-    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, ,Rails, Python, ")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, ,Rails, Python, ")
 
     assert developer.technical_skills = ["Ruby", "Rails", "Python"]
   end
@@ -101,29 +101,9 @@ class DeveloperTest < ActiveSupport::TestCase
     refute_includes developers, developers(:unavailable)
   end
 
-  test "max rate must be higher than min" do
-    developer = developers(:available)
-
-    developer.preferred_min_hourly_rate = 100
-    developer.preferred_max_hourly_rate = 50
-
-    refute developer.valid?
-  end
-
-  test "max salary must be higher than min" do
-    developer = developers(:available)
-
-    developer.preferred_min_salary = 100_000
-    developer.preferred_max_salary = 50_000
-
-    refute developer.valid?
-  end
-
   test "successful profile creation sends a notification to the admins" do
-    user = users(:without_profile)
-
     assert_difference "Notification.count", 1 do
-      Developer.create!(name: "name", hero: "hero", bio: "bio", technical_skills: "Ruby, Rails", pivot_skills: "writing, project management", user:)
+      Developer.create!(valid_developer_attributes)
     end
 
     assert_equal Notification.last.type, NewDeveloperProfileNotification.name
@@ -208,22 +188,35 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "is valid with github username" do
     user = users(:with_available_profile)
-    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", github: "rails")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", github: "rails")
 
     assert developer.valid?
   end
 
   test "is valid with linkedin username" do
     user = users(:with_available_profile)
-    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", linkedin: "ruby")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", linkedin: "ruby")
 
     assert developer.valid?
   end
 
   test "is valid with twitter username" do
     user = users(:with_available_profile)
-    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", twitter: "hirethepivot")
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "FooBar", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", twitter: "hirethepivot")
 
     assert developer.valid?
+  end
+
+  def valid_developer_attributes
+    {
+      user: users(:empty),
+      name: "Name",
+      hero: "Hero",
+      bio: "Bio",
+      pivot_skills: "customer relations, writing", 
+      technical_skills: "Ruby, Rails",
+      avatar: active_storage_blobs(:one),
+      time_zone: "Pacific Time (US & Canada)"
+    }
   end
 end

@@ -17,10 +17,6 @@ en:
         hero: Hero
         linkedin: LinkedIn
         name: Name
-        preferred_max_hourly_rate: Hourly rate (max)
-        preferred_max_salary: Salary (max)
-        preferred_min_hourly_rate: Hourly rate (min)
-        preferred_min_salary: Salary (min)
         twitter: Twitter
         website: Website
       developer/search_status:
@@ -71,11 +67,13 @@ en:
       created: Your business was added!
     form:
       avatar: Avatar
-      change_avatar: Change
+      change_avatar: Upload
+      creating: Creating...
       profile: Profile
       profile_help_text: This information will be shared with any developers that you contact.
       save: Save
       something_went_wrong: Something went wrong uploading your image, please try again.
+      updating: Updating...
       your_business_profile: Your business profile
     update:
       updated: Your business was updated!
@@ -98,12 +96,6 @@ en:
     alt: Developer's cover image
   developer_query_component:
     apply: Apply
-    budget:
-      currency: USD
-      hourly: Max. hourly rate
-      per_hour: "/hr"
-      salary: Max. salary
-      title: Budget
     gmt: GMT
     sort:
       availability: Availability
@@ -118,17 +110,15 @@ en:
     details:
       title: Details
     form:
+      creating: Creating...
       online_presence:
         help_text: Where can people learn more about you and your work?
         title: Online presence
-      preferred_compensation:
-        help_text: What is your preferred annual salary and/or hourly rate?
-        title: Preferred compensation
       profile:
         avatar: Avatar
         avatar_error_text: Something went wrong uploading your image, please try again.
         bio_help_text: Write a few sentences about yourself.
-        change: Change
+        change: Upload
         cover_image: Cover image
         help_text: This information will be displayed publicly so be careful what you share.
         hero_help_text: Summarize yourself as a developer in a few words.
@@ -149,6 +139,7 @@ en:
         open_help_text: Companies can still find you, but you won't appear on the homepage.
         title: Search status
       title: Your developer profile
+      updating: Updating...
       work_preferences:
         help_text: What kind of work are you looking for next?
         title: Work preferences
@@ -165,6 +156,7 @@ en:
   errors:
     business_blank: Fill out your business profile to message developers.
     messages:
+      attached: is not attached
       content_type_invalid: image format not supported
       max_file_size_invalid: image over %{size}
   home:
@@ -184,6 +176,7 @@ en:
     form:
       help: Add your message
       placeholder: Add your message...
+      sending: Sending...
       submit: Send
     message:
       wrote: wrote
@@ -206,8 +199,6 @@ en:
   paywalled_component:
     description: Information that is only visible with a business subscription.
     title: Private information
-  preferred_compensation_component:
-    preferred_compensation: Preferred compensation
   pricing:
     show:
       cta: Get started today
