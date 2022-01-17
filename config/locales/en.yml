@@ -258,16 +258,6 @@ en:
       looking_for_work_help_text: You're a second career developer looking for your next gig.
       what_brings_you_here: What brings you to hirethePIVOT?
   shared:
-    footer:
-      about: About
-      analytics: Analytics
-      bengreenberg_dev: bengreenberg.dev
-      copyright: All rights reserved.
-      email: Email
-      github: GitHub
-      open_source: Open source
-      support: Support
-      twitter: Twitter
     header:
       open_main_menu: Open main menu
     nav_links:
