@@ -26,7 +26,7 @@ class AvailabilityComponentTest < ViewComponent::TestCase
     render_inline(AvailabilityComponent.new(developer: @developer))
 
     assert_no_selector("svg")
-    assert_selector("span", text: /\n    Available in 2 months\n  /m)
+    assert_selector("span", text: /Available\s*in\s*(about\s*)?2 months/m)
   end
 
   test "unavailable icon and color" do

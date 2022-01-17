@@ -7,10 +7,21 @@ def create_user!(name)
   )
 end
 
+def create_developer!(attributes)
+  avatar_name = attributes.delete(:avatar_name)
+  Developer.create!(attributes) do |developer|
+    developer.avatar.attach(io: File.open(Rails.root.join("test/fixtures/files/#{avatar_name}")), filename: avatar_name)
+  end
+end
+
+def attach(filename, to:)
+  to.attach(io: File.open(Rails.root.join("test/fixtures/files", filename)), filename:)
+end
+
 admin = create_user!("admin")
 admin.update!(admin: true)
 
-developer = Developer.create!(
+developer = create_developer!(
   user: create_user!("Dennis"),
   name: "Dennis Ritchie",
   available_on: Date.new(2021, 1, 1),
@@ -20,10 +31,13 @@ developer = Developer.create!(
   github: "dennis",
   twitter: "ritchie",
   pivot_skills: "project management, customer relations",
-  technical_skills: "Ruby, Rails, HTML"
+  technical_skills: "Ruby, Rails, HTML",
+  time_zone: "Eastern Time (US & Canada)",
+  avatar_name: "dennis.png"
 )
+developer.create_role_type!(part_time_contract: true, full_time_contract: true)
 
-Developer.create!(
+bjarne_developer = create_developer!(
   user: create_user!("Bjarne"),
   name: "Bjarne Stroustrup",
   available_on: Date.new(2022, 1, 1),
@@ -33,10 +47,13 @@ Developer.create!(
   github: "bjarne",
   twitter: "stroustrup",
   pivot_skills: "customer relations",
-  technical_skills: "JavaScript, C, Yarn"
+  technical_skills: "JavaScript, C, Yarn",
+  time_zone: "Eastern Time (US & Canada)",
+  avatar_name: "bjarne.png"
 )
+bjarne_developer.create_role_type!(full_time_employment: true)
 
-Developer.create!(
+create_developer!(
   user: create_user!("Ada"),
   name: "Ada Lovelace",
   available_on: Date.new(2021, 1, 1),
@@ -46,15 +63,20 @@ Developer.create!(
   github: "ada",
   twitter: "lovelace",
   pivot_skills: "mentorship, writing",
-  technical_skills: "Ruby, Rails, Python"
+  technical_skills: "Ruby, Rails, Python",
+  time_zone: "Eastern Time (US & Canada)",
+  avatar_name: "lovelace.jpg"
 )
 
-business = Business.create!(
+business = Business.new(
   user: create_user!("Business"),
   name: "Thomas Dohmke",
   company: "GitHub",
-  bio: "GitHub is where over 73 million developers shape the future of software, together."
+  bio: "GitHub is where over 73 million developers shape the future of software, together.",
+  developer_notifications: :no
 )
+attach("mountains.jpg", to: business.avatar)
+business.save!
 
 business.user.set_payment_processor(:fake_processor, allow_fake: true)
 business.user.payment_processor.subscribe(plan: "hirethepivot")

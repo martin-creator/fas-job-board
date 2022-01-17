@@ -69,6 +69,15 @@ en:
       avatar: Avatar
       change_avatar: Upload
       creating: Creating...
+      developer_notifications:
+        help_text: Receive daily or weekly email notifications when new developers add their profile to railsdevs.
+        legend: Developer notifications
+        values:
+          daily: Daily
+          'no': Never
+          weekly: Weekly
+      notifications:
+        title: Email notifications
       profile: Profile
       profile_help_text: This information will be shared with any developers that you contact.
       save: Save
@@ -222,7 +231,7 @@ en:
         '3': Skip job descriptions and formal postings.
         '4': Talk directly to candidates.
         '5': Unlock private developer information.
-        '6': Hire as much or as little as you need.
+        '6': Receive email updates of new candidates.
         '7': Cancel anytime with no obligations.
         '8': Support open source development.
         subtitle: Browse developer profiles who can start working ASAP or when you need help. Save time by reaching out the perfect candidates.
@@ -249,12 +258,25 @@ en:
       looking_for_work_help_text: You're a second career developer looking for your next gig.
       what_brings_you_here: What brings you to hirethePIVOT?
   shared:
+    footer:
+      about: About
+      analytics: Analytics
+      bengreenberg_dev: bengreenberg.dev
+      copyright: All rights reserved.
+      email: Email
+      github: GitHub
+      open_source: Open source
+      support: Support
+      twitter: Twitter
     header:
       open_main_menu: Open main menu
     nav_links:
       about: About
       open_source: Open source
       pricing: Pricing
+  upgrade_account_component:
+    cta: Upgrade your account
+    title: Requires an active business subscription.
   user_menu:
     signed_in_component:
       admin: Admin
