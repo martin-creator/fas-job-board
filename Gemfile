@@ -10,6 +10,7 @@ gem "hotwire-rails", "~> 0.1"
 gem "jsbundling-rails", "~> 1.0"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
+gem "rails_admin", [">= 3.0.0.beta2", "< 4"]
 gem "sprockets-rails", "~> 3.4"
 gem "stimulus-rails", "~> 0.7"
 gem "turbo-rails", "~> 1.0"
@@ -41,6 +42,7 @@ gem "aws-sdk-s3", "~> 1", require: false
 gem "classy-yaml", "~> 0.7"
 gem "devise", "~> 4.8.1"
 gem "friendly_id", "~> 5.4"
+gem "image_processing", "~> 1.2"
 gem "inline_svg", "~> 1.7"
 gem "mailgun-ruby", "~> 1.2"
 gem "noticed", "~> 1.4"
@@ -51,3 +53,7 @@ gem "redcarpet", "~> 3.5"
 gem "sidekiq", "~> 6.3"
 gem "stripe", ">= 2.8", "< 6.0"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :assets do
+  gem "sassc-rails", "~> 2.1"
+end
