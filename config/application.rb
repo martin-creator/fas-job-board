@@ -52,5 +52,7 @@ module Railsdevs
 
     # Use default language as fallback if translation is missing
     config.i18n.fallbacks = true
+
+    config.assets.css_compressor = nil
   end
 end

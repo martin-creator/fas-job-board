@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
   }
 
+  mount RailsAdmin::Engine => "/backend", :as => "rails_admin"
+
   resource :home, only: :show
   resource :about, only: :show, controller: :about
   resource :conduct, only: :show

@@ -21,6 +21,10 @@ class User < ApplicationRecord
 
   scope :admin, -> { where(admin: true) }
 
+  def pay_customer_name
+    business&.name
+  end
+
   def active_business_subscription?
     subscriptions.any?(&:active?)
   end
