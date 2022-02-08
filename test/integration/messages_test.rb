@@ -97,6 +97,15 @@ class MessagesTest < ActionDispatch::IntegrationTest
     assert_select "p", text: "Line 2"
   end
 
+  test "links are clickable" do
+    sign_in @business.user
+    @conversation.messages.last.update!(body: "Check out https://hirethepivot.com!")
+
+    get conversation_path(@conversation)
+
+    assert_select "p", html: 'Check out <a href="https://hirethepivot.com" target="_blank">https://hirethepivot.com</a>!'
+  end
+
   def message_params
     {
       message: {

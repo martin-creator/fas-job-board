@@ -96,8 +96,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = {host: "hirethepivot.com"}
 
+  # Devise mailer.
+  config.action_mailer.default_url_options = {host: ENV["HOST"], locale: nil}
+
   # Configure host for URL helpers.
-  Rails.application.routes.default_url_options[:host] = ENV["HOST"]
+  Rails.application.routes.default_url_options = {host: ENV["HOST"], locale: nil}
 
   # Upload sitemap to S3.
   # config.upload_sitemap = true
