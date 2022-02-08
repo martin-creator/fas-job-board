@@ -34,10 +34,13 @@ end
 
 group :test do
   gem "capybara", "~> 3.36"
+  gem "minitest-reporters", "~> 1.5", require: false
+  gem "minitest-reporters-pride_reporter", "~> 0.0.2", require: false
   gem "selenium-webdriver"
   gem "webdrivers"
 end
 
+gem "auto_html", "~> 2.1"
 gem "aws-sdk-s3", "~> 1", require: false
 gem "classy-yaml", "~> 0.7"
 gem "devise", "~> 4.8.1"
@@ -53,7 +56,9 @@ gem "pagy", "~> 5.2"
 gem "pay", "~> 3.0"
 gem "pundit", "~> 2.1"
 gem "redcarpet", "~> 3.5"
-gem "sidekiq", "~> 6.3"
+gem "rexml", "~> 3.2", ">= 3.2.5"
+gem "sidekiq", "~> 6.4"
+gem "sitemap_generator", "~> 6.1"
 gem "stripe", ">= 2.8", "< 6.0"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 

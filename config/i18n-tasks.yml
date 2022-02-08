@@ -15,7 +15,7 @@ data:
 
   # Locale files or `File.find` patterns where translations are read from:
   read:
-    - 'config/locales/devise.%{locale}.yml'
+    - 'config/locales/devise.views.%{locale}.yml'
     - 'config/locales/%{locale}.yml'
     ## Default:
     # - config/locales/%{locale}.yml
@@ -114,6 +114,7 @@ ignore_unused:
 - '{devise}.*'
 - 'availability_component.*'
 - 'errors.messages.*'
+- 'size.{billion,million,thousand,unit}'
 # - '{devise,kaminari,will_paginate}.*'
 # - 'simple_form.{yes,no}'
 # - 'simple_form.{placeholders,hints,labels}.*'

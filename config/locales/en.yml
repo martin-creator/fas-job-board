@@ -248,6 +248,11 @@ en:
       title: No read notifications
     index:
       title: Read notifications
+  registrations:
+    create_account: create an account
+    register: Register
+    sign_up_hero: Create your account
+    sign_up_html: Or %{link}
   role_type_component:
     interested_in_roles: Interested in roles
   roles:
@@ -257,6 +262,11 @@ en:
       looking_for_work: I'm looking for work
       looking_for_work_help_text: You're a second career developer looking for your next gig.
       what_brings_you_here: What brings you to hirethePIVOT?
+  sessions:
+    sign_in: Sign in
+    sign_in_hero: Sign in to your account
+    sign_in_link: sign in to your account
+    sign_in_link_html: Or %{link}
   shared:
     header:
       open_main_menu: Open main menu
@@ -264,6 +274,11 @@ en:
       about: About
       open_source: Open source
       pricing: Pricing
+  size:
+    billion: B
+    million: M
+    thousand: K
+    unit: ''
   upgrade_account_component:
     cta: Upgrade your account
     title: Requires an active business subscription.
@@ -271,6 +286,7 @@ en:
     signed_in_component:
       admin: Admin
       billing: Billing
+      blocked_conversations: Blocked conversations
       get_started: Get started
       my_business_profile: My business profile
       my_conversations: My conversations

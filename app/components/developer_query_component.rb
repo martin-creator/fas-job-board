@@ -7,7 +7,7 @@ class DeveloperQueryComponent < ApplicationComponent
     @query = query
   end
 
-  def selected?(time_zone_pair)
+  def time_zone_selected?(time_zone_pair)
     query.time_zones.include?(time_zone_pair.first)
   end
 
