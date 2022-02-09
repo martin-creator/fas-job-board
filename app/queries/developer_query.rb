@@ -28,11 +28,11 @@ class DeveloperQuery
   end
 
   def pagy
-    @pagy ||= initialize_pagy_and_developers.first
+    @pagy ||= initialize_pagy.first
   end
 
   def records
-    @records ||= initialize_pagy_and_developers.last
+    @records ||= initialize_pagy.last
   end
 
   private
