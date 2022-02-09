@@ -10,7 +10,7 @@ gem "hotwire-rails", "~> 0.1"
 gem "jsbundling-rails", "~> 1.0"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
-gem "rails_admin", [">= 3.0.0.beta2", "< 4"]
+gem "rails_admin", [">= 3.0.0.rc", "< 4"]
 gem "sprockets-rails", "~> 3.4"
 gem "stimulus-rails", "~> 0.7"
 gem "turbo-rails", "~> 1.0"

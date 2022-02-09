@@ -207,6 +207,21 @@ class DeveloperTest < ActiveSupport::TestCase
     assert developer.valid?
   end
 
+  test "invalid with link in bio" do
+    user = users(:with_available_profile)
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "this is a bio, https://bengreenberg.dev", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", twitter: "hirethepivot")
+
+    refute developer.valid?
+    assert_not_nil developer.errors[:bio]
+  end
+
+  test "valid with no links in bio" do
+    user = users(:with_available_profile)
+    developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "this is a bio with no links", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", twitter: "hirethepivot")
+
+    assert developer.valid?
+  end
+
   def valid_developer_attributes
     {
       user: users(:empty),
