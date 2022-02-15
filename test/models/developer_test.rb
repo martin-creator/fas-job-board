@@ -1,6 +1,8 @@
 require "test_helper"
 
 class DeveloperTest < ActiveSupport::TestCase
+  include DevelopersHelper
+
   setup do
     @developer = developers :available
   end
@@ -103,7 +105,7 @@ class DeveloperTest < ActiveSupport::TestCase
 
   test "successful profile creation sends a notification to the admins" do
     assert_difference "Notification.count", 1 do
-      Developer.create!(valid_developer_attributes)
+      Developer.create!(developer_attributes)
     end
 
     assert_equal Notification.last.type, NewDeveloperProfileNotification.name
@@ -236,18 +238,5 @@ class DeveloperTest < ActiveSupport::TestCase
     developer = Developer.new(user:, name: "Foo", hero: "Bar", bio: "this is a bio with no links", avatar: active_storage_blobs(:one), time_zone: "Pacific Time (US & Canada)", pivot_skills: "customer relations, writing", technical_skills: "Ruby, Rails", twitter: "hirethepivot")
 
     assert developer.valid?
-  end
-
-  def valid_developer_attributes
-    {
-      user: users(:empty),
-      name: "Name",
-      hero: "Hero",
-      bio: "Bio",
-      pivot_skills: "customer relations, writing",
-      technical_skills: "Ruby, Rails",
-      avatar: active_storage_blobs(:one),
-      time_zone: "Pacific Time (US & Canada)"
-    }
   end
 end

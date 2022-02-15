@@ -515,7 +515,7 @@ DEPENDENCIES
   pay (~> 3.0)
   pg (~> 1.1)
   pry-rails
-  puma (~> 5.0)
+  puma (~> 5.6)
   pundit (~> 2.1)
   rails (~> 7.0)
   rails_admin (>= 3.0.0.rc, < 4)
