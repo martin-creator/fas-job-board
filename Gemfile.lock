@@ -293,6 +293,7 @@ GEM
       net-protocol
       timeout
     netrc (0.11.0)
+    newrelic_rpm (8.4.0)
     nio4r (2.5.8)
     nokogiri (1.13.1-arm64-darwin)
       racc (~> 1.4)
@@ -507,6 +508,7 @@ DEPENDENCIES
   mailgun-ruby (~> 1.2)
   minitest-reporters (~> 1.5)
   minitest-reporters-pride_reporter (~> 0.0.2)
+  newrelic_rpm (~> 8.4)
   noticed (~> 1.4)
   omniauth (~> 2.0)
   omniauth-google-oauth2 (~> 1.0)
