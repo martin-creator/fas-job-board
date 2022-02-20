@@ -85,6 +85,19 @@ stripe:
   price_id: price_YOUR_PRODUCT_PRICE_ID
 ```
 
+### New Relic
+
+The site uses New Relic to monitor application performance. It is free to create an account on New Relic by visiting the [sign up](https://newrelic.com/signup) page. You will need to fetch your New Relic license key from the API keys section in your New Relic account, and adding it to your application credentials:
+
+```yaml
+newrelic:
+  license_key:
+```
+
+### Administration
+
+We use [madmin](https://github.com/excid3/madmin) to provide an administrative backend for hirethePIVOT. The route `/madmin` is scoped to admin accounts only. Once logged into an admin user account, you can visit the route to access the backend.
+
 ## Testing
 
 * Run `rails test` to run unit/integration tests.

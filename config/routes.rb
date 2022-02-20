@@ -1,11 +1,11 @@
 require "sidekiq/web"
 
 Rails.application.routes.draw do
+  draw :madmin
+
   devise_for :users, controllers: {
     omniauth_callbacks: "users/omniauth_callbacks"
   }
-
-  mount RailsAdmin::Engine => "/backend", :as => "rails_admin"
 
   resource :home, only: :show
   resource :about, only: :show, controller: :about
