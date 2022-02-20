@@ -29,6 +29,7 @@ group :development do
   gem "hotwire-livereload"
   gem "listen", "~> 3.3"
   gem "redis"
+  gem "bullet"
 end
 
 group :test do

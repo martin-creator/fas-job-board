@@ -9,7 +9,7 @@ class DevelopersController < ApplicationController
       @query = DeveloperQuery.new(search_params)
     else
       developers = Developer
-        .includes(:role_type).with_attached_avatar
+        .with_attached_avatar
         .newest_first
 
       @pagy, @developers = pagy(developers)
