@@ -1,9 +1,8 @@
 require "sidekiq/web"
 
 Rails.application.routes.draw do
-  authenticated :user, lambda { |u| u.admin? } do
-    draw :madmin
-  end
+  draw :madmin
+
   devise_for :users, controllers: {
     omniauth_callbacks: "users/omniauth_callbacks"
   }
