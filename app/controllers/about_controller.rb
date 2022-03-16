@@ -10,6 +10,10 @@ class AboutController < ApplicationController
   def privacy
   end
 
+  def tips
+    @tips = renderer.render(File.read(file("tips"))).html_safe
+  end
+
   private
 
   def renderer

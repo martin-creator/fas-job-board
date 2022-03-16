@@ -4,6 +4,9 @@ en:
     show:
       description: I'm Ben Greenberg. I'm building hirethePIVOT to make it easier for second career developers to find their next gig.
       title: About hirethePIVOT
+    tips:
+      description: Learn how to make your developer profile stand out
+      title: Dos and Don’ts of the Pivoter Profile
   activerecord:
     attributes:
       business:

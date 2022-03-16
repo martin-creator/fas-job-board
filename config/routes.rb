@@ -36,6 +36,8 @@ Rails.application.routes.draw do
 
   get "/terms", to: "about#terms", as: :terms_page
 
+  get "/tips", to: "about#tips", as: :tips_path
+
   root to: "home#show"
 
   authenticate :user, lambda { |user| SidekiqPolicy.new(user).visible? } do
