@@ -1,6 +1,8 @@
 name: Release
 on:
-  - release
+  release:
+    types: [published]
+  workflow_dispatch:
 
 jobs:
   newrelic:
