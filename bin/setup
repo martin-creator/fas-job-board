@@ -48,7 +48,7 @@ FileUtils.chdir APP_ROOT do
 
   puts "\n== Next steps =="
   puts "Start Postgres:"
-  puts "  brew services restart postgresql"
+  puts "  start-pg"
   puts "Start Redis:"
-  puts "  brew services restart redis"
+  puts " redis-server"
 end

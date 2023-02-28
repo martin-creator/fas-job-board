@@ -63,6 +63,7 @@ gem "sidekiq", "~> 6.4"
 gem "sitemap_generator", "~> 6.1"
 gem "stripe", ">= 2.8", "< 6.0"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 group :assets do
   gem "sassc-rails", "~> 2.1"
