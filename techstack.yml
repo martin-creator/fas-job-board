@@ -1,0 +1,729 @@
+repo_name: martin-creator/fas-job-board
+report_id: 99449b6e9d9aa5ad9037904bf27b9010
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T19:52:01+00:00'
+requested_by: martin-creator
+provider: github
+branch: main
+detected_tools_count: 53
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/martin-creator/fas-job-board
+  detection_source: Repo Metadata
+- name: Ruby
+  description: A dynamic, interpreted, open source programming language with a focus
+    on simplicity and productivity
+  website_url: https://www.ruby-lang.org
+  version: 3.1.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Repo Metadata
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: Autoprefixer
+  description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
+  website_url: https://github.com/postcss/autoprefixer
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Dino Maric
+  last_updated_on: 2021-12-19 18:29:27.000000000 Z
+- name: PostCSS
+  description: Transform CSS with JS plugins
+  website_url: https://github.com/postcss/postcss
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/3339/rlFcjEdI.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: Rails
+  description: Web development that doesn't hurt
+  website_url: http://rubyonrails.org/
+  version: 7.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/990/x57_Lorv.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-01-23 13:53:58.000000000 Z
+- name: Tailwind CSS
+  description: A utility-first CSS framework for rapid UI development
+  website_url: https://tailwindcss.com
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Dino Maric
+  last_updated_on: 2021-12-19 18:29:27.000000000 Z
+- name: Amazon S3
+  description: Store and retrieve any amount of data, at any time, from anywhere on
+    the web
+  website_url: http://aws.amazon.com/s3
+  open_source: false
+  hosted_saas: true
+  category: Data Stores
+  sub_category: Cloud Storage
+  image_url: https://img.stackshare.io/service/25/amazon-s3.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: PostgreSQL
+  description: A powerful, open source object-relational database system
+  website_url: http://www.postgresql.org/
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1028/ASOhU5xJ.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: Redis
+  description: Open source (BSD licensed), in-memory data structure store
+  website_url: http://redis.io/
+  version: 4.6.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: In-Memory Databases
+  image_url: https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-12-12 04:53:27.000000000 Z
+- name: Sidekiq
+  description: Simple, efficient background processing for Ruby
+  website_url: http://sidekiq.org/
+  version: 6.4.1
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Background Processing
+  image_url: https://img.stackshare.io/service/1078/4b7277462dadad85454ab427ce3f0ca7.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-02-08 07:39:38.000000000 Z
+- name: Capybara
+  description: Acceptance test framework for web applications
+  website_url: http://jnicklas.github.io/capybara/
+  version: 3.36.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2595/capybara.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-11-14 06:03:03.000000000 Z
+- name: Esbuild
+  description: An extremely fast JavaScript bundler
+  website_url: https://esbuild.github.io/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/25166/default_2dcc9286a150737a14625d18f6f93747f72be430.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Dino Maric
+  last_updated_on: 2021-12-19 22:04:45.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board
+  detection_source: Repo Metadata
+- name: New Relic
+  description: New Relic is the industry’s largest and most comprehensive cloud-based
+    observability platform.
+  website_url: http://newrelic.com
+  open_source: false
+  hosted_saas: true
+  category: Monitoring
+  sub_category: Performance Monitoring
+  image_url: https://img.stackshare.io/service/103/default_193410db3a7e419c7b436961bf41d733c7346b59.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-02-18 07:09:02.000000000 Z
+- name: Puma
+  description: A Modern, Concurrent Web Server for Ruby
+  website_url: http://puma.io/
+  version: 5.6.1
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Web Servers
+  image_url: https://img.stackshare.io/service/1055/favicon.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: RubyGems
+  description: Easily download, install, and use ruby software packages on your system
+  website_url: https://rubygems.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/yarn.lock
+  detection_source: yarn.lock
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: Heroku
+  description: Build, deliver, monitor and scale web apps and APIs with a trail blazing
+    developer experience.
+  website_url: https://www.heroku.com
+  open_source: false
+  hosted_saas: true
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/133/3wgIDj3j.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: Mailgun
+  description: The Email Service for Developers.
+  website_url: http://mailgun.com
+  open_source: false
+  hosted_saas: true
+  category: Communications
+  sub_category: Transactional Email
+  image_url: https://img.stackshare.io/service/44/ICON_MAILGUN_NOFX.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-11-02 21:39:17.000000000 Z
+- name: Stripe
+  description: Payments for developers
+  website_url: https://stripe.com
+  open_source: false
+  hosted_saas: true
+  category: Payments
+  sub_category: Payment Services
+  image_url: https://img.stackshare.io/service/97/eW6tXeq3.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-12-20 02:54:58.000000000 Z
+- name: Twilio SendGrid
+  description: Email Delivery. Simplified.
+  website_url: http://sendgrid.com
+  open_source: false
+  hosted_saas: true
+  category: Communications
+  sub_category: Transactional Email
+  image_url: https://img.stackshare.io/service/43/kQ_6nwmP.jpg
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/config/environments/production.rb
+  detection_source: config/environments/production.rb
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 20:58:14.000000000 Z
+- name: Devise
+  description: Flexible authentication solution for Rails with Warden
+  website_url: https://github.com/plataformatec/devise
+  version: 4.8.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: User Management and Authentication
+  image_url: https://img.stackshare.io/service/1432/devise.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-12-25 03:05:01.000000000 Z
+- name: OmniAuth
+  description: OmniAuth is a flexible authentication system utilizing Rack middleware.
+  website_url: https://github.com/intridea/omniauth
+  version: 2.0.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: User Management and Authentication
+  image_url: https://img.stackshare.io/service/1433/omniauth.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board
+  detection_source: Repo Metadata
+- name: aws-sdk-s3
+  description: Official AWS Ruby gem for Amazon Simple Storage Service
+  package_url: https://rubygems.org/aws-sdk-s3
+  version: 1.112.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19078/default_4df61286a41b221e05fffb41a1003ffc1a8eaf4e.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-11-03 20:06:23.000000000 Z
+- name: bullet
+  description: Help to kill N+1 queries and unused eager loading
+  package_url: https://rubygems.org/bullet
+  version: 7.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-02-20 15:42:06.000000000 Z
+- name: byebug
+  description: Byebug is a Ruby debugger
+  package_url: https://rubygems.org/byebug
+  version: 11.1.3
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18849/default_887cb273c504fac90d07fc552b7b223fbb32ca39.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2021-12-26 18:23:27.000000000 Z
+- name: figaro
+  description: Simple
+  package_url: https://rubygems.org/figaro
+  version: 1.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19607/default_ad0710c65b106932707389deb3b2e0b93a1ef7b6.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: martin-creator
+  last_updated_on: 2023-02-28 10:08:27.000000000 Z
+- name: friendly_id
+  description: FriendlyId is the "Swiss Army bulldozer" of slugging and permalink
+    plugins for Active Record
+  package_url: https://rubygems.org/friendly_id
+  version: 5.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19084/default_54dcdbda5f19ac7cce7dfde7a31f57a35d2cdc2f.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2021-12-29 13:46:09.000000000 Z
+- name: i18n-tasks
+  description: I18n-tasks helps you find and manage missing and unused translations
+  package_url: https://rubygems.org/i18n-tasks
+  version: 0.9.37
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-12-25 03:05:01.000000000 Z
+- name: image_processing
+  description: High-level wrapper for processing images for the web with ImageMagick
+    or libvips
+  package_url: https://rubygems.org/image_processing
+  version: 1.12.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-01-23 13:53:58.000000000 Z
+  vulnerabilities:
+  - name: Remote shell execution vulnerability in image_processing
+    cve_id: CVE-2022-24720
+    cve_url: https://github.com/advisories/GHSA-cxf7-qrc5-9446
+    detected_date: Mar 2
+    severity: critical
+    first_patched: 1.12.2
+- name: inline_svg
+  description: Get an SVG into your view and then style it with CSS
+  package_url: https://rubygems.org/inline_svg
+  version: 1.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-11-02 21:20:40.000000000 Z
+- name: listen
+  description: The Listen gem listens to file modifications and notifies you about
+    the changes
+  package_url: https://rubygems.org/listen
+  version: 3.7.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18942/default_a51418802dbfb428c729400211798b5046fe4140.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: mailgun-ruby
+  description: Mailgun's Official Ruby SDK for interacting with the Mailgun API
+  package_url: https://rubygems.org/mailgun-ruby
+  version: 1.2.5
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-01-09 22:55:27.000000000 Z
+- name: minitest-reporters
+  description: Death to haphazard monkey-patching! Extend Minitest through simple
+    hooks
+  package_url: https://rubygems.org/minitest-reporters
+  version: 1.5.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18888/default_1e22ca9f3f63a8c93249bae500705b9451e7e882.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-02-08 07:39:38.000000000 Z
+- name: newrelic_rpm
+  description: New Relic is a performance management system, developed by New Relic,
+    Inc
+  package_url: https://rubygems.org/newrelic_rpm
+  version: 8.4.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19246/default_518f3430d0c3ea4653c591ebd7e75da67f51cfaf.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-02-18 07:09:02.000000000 Z
+- name: omniauth-google-oauth2
+  description: A Google OAuth2 strategy for OmniAuth 1.x
+  package_url: https://rubygems.org/omniauth-google-oauth2
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-01-23 06:16:24.000000000 Z
+- name: pg
+  description: Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/]
+  package_url: https://rubygems.org/pg
+  version: 1.3.1
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18855/default_d343d9a7c573fa5dcbeb4d3c43d2ffe4afa82cc1.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: pry-rails
+  description: Use Pry as your rails console
+  package_url: https://rubygems.org/pry-rails
+  version: 0.3.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19013/default_3667c8b28d9ec2ad93884ef523ec8f357774f78e.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-01-23 13:53:58.000000000 Z
+- name: pundit
+  description: Object oriented authorization for Rails applications
+  package_url: https://rubygems.org/pundit
+  version: 2.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19356/default_52558f51b74ce64c7cbad8d12a58dc6f69d14be8.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Tonksthebear
+  last_updated_on: 2021-11-01 21:26:53.000000000 Z
+- name: redcarpet
+  description: A fast, safe and extensible Markdown to
+  package_url: https://rubygems.org/redcarpet
+  version: 3.5.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18853/default_b87d202e13d56f87c63181fa49bc5e099c9abaac.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2021-11-14 06:16:52.000000000 Z
+- name: sassc-rails
+  description: Integrate SassC-Ruby into Rails
+  package_url: https://rubygems.org/sassc-rails
+  version: 2.1.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19508/default_e4388de496824e0638763f2d5c887a8895c2ceb4.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-01-23 13:53:58.000000000 Z
+- name: selenium-webdriver
+  description: WebDriver is a tool for writing automated tests of websites
+  package_url: https://rubygems.org/selenium-webdriver
+  version: 4.1.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/18901/default_f0ad2b1ffbe10fdd866f9f8e5f812599d9e8085b.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Salomón Charabati
+  last_updated_on: 2022-01-12 19:18:51.000000000 Z
+- name: sitemap_generator
+  description: SitemapGenerator is a framework-agnostic XML Sitemap generator written
+    in Ruby with automatic Rails integration
+  package_url: https://rubygems.org/sitemap_generator
+  version: 6.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-02-08 07:39:38.000000000 Z
+- name: sprockets-rails
+  description: Sprockets Rails integration
+  package_url: https://rubygems.org/sprockets-rails
+  version: 3.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19198/default_be4b4d308c5637e0747ed40c613027452d6ef0c5.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Ben Greenberg
+  last_updated_on: 2022-01-23 13:53:58.000000000 Z
+- name: standard
+  description: Ruby Style Guide, with linter &amp; automatic code fixer
+  package_url: https://rubygems.org/standard
+  version: 1.7.0
+  license: Other
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19626/default_24cad47554aea67cca67c6d639dc04101febb00b.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-10-21 19:10:29.000000000 Z
+- name: tzinfo-data
+  description: TZInfo::Data contains data from the IANA Time Zone database packaged
+    as Ruby modules for use with TZInfo
+  package_url: https://rubygems.org/tzinfo-data
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19516/default_07037590725b871de29c1d2ebb4610950e953355.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: Joe Masilotti
+  last_updated_on: 2021-12-20 02:54:58.000000000 Z
+- name: webdrivers
+  description: Run Selenium tests more easily with install and updates for all supported
+    webdrivers
+  package_url: https://rubygems.org/webdrivers
+  version: 5.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19420/default_16904f646648128b821ee8aabb068fa7a1b5025f.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/Gemfile.lock
+  detection_source: Gemfile
+  last_updated_by: Salomón Charabati
+  last_updated_on: 2022-01-12 19:18:51.000000000 Z
+- name: "@tailwindcss/typography"
+  description: A Tailwind CSS plugin for automatically styling plain HTML content
+    with beautiful typographic defaults
+  package_url: https://www.npmjs.com/@tailwindcss/typography
+  version: 0.5.0
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/npm/image.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Dino Maric
+  last_updated_on: 2021-12-19 18:29:27.000000000 Z
+- name: postcss-import
+  description: PostCSS plugin to import CSS files
+  package_url: https://www.npmjs.com/postcss-import
+  version: 14.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16086/default_d4e765f8a43dcfd232c8b9ee9732058bc27c727a.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Dino Maric
+  last_updated_on: 2021-12-19 18:29:27.000000000 Z
+- name: tailwindcss
+  description: A utility-first CSS framework for rapidly building custom user interfaces
+  package_url: https://www.npmjs.com/tailwindcss
+  version: 3.0.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17398/default_2cd7ed1c123f2fca074a6f4b16c4e73d5bfe82be.png
+  detection_source_url: https://github.com/martin-creator/fas-job-board/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Dino Maric
+  last_updated_on: 2021-12-19 18:29:27.000000000 Z
