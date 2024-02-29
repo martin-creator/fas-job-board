@@ -3,28 +3,28 @@
 ## Tech Stack
 martin-creator/fas-job-board is built on the following main stack:
 
-- [Amazon S3](http://aws.amazon.com/s3) – Cloud Storage
-- [Twilio SendGrid](http://sendgrid.com) – Transactional Email
-- [Mailgun](http://mailgun.com) – Transactional Email
-- [Stripe](https://stripe.com) – Payment Services
-- [New Relic](http://newrelic.com) – Performance Monitoring
-- [Heroku](https://www.heroku.com) – Platform as a Service
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [Ruby](https://www.ruby-lang.org) – Languages
+- [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
+- [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
 - [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
+- [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
+- [Amazon S3](http://aws.amazon.com/s3) – Cloud Storage
 - [PostgreSQL](http://www.postgresql.org/) – Databases
 - [Redis](http://redis.io/) – In-Memory Databases
-- [Puma](http://puma.io/) – Web Servers
 - [Sidekiq](http://sidekiq.org/) – Background Processing
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- [Capybara](http://jnicklas.github.io/capybara/) – Testing Frameworks
+- [Esbuild](https://esbuild.github.io/) – JS Build Tools / JS Task Runners
+- [New Relic](http://newrelic.com) – Performance Monitoring
+- [Puma](http://puma.io/) – Web Servers
+- [Yarn](https://yarnpkg.com/) – Front End Package Manager
+- [Heroku](https://www.heroku.com) – Platform as a Service
+- [Mailgun](http://mailgun.com) – Transactional Email
+- [Stripe](https://stripe.com) – Payment Services
+- [Twilio SendGrid](http://sendgrid.com) – Transactional Email
 - [Devise](https://github.com/plataformatec/devise) – User Management and Authentication
 - [OmniAuth](https://github.com/intridea/omniauth) – User Management and Authentication
-- [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
-- [Capybara](http://jnicklas.github.io/capybara/) – Testing Frameworks
-- [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
 - [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
-- [Yarn](https://yarnpkg.com/) – Front End Package Manager
-- [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
-- [Esbuild](https://esbuild.github.io/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
 
@@ -34,28 +34,28 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 martin-creator/fas-job-board is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/25/amazon-s3.png' alt='Amazon S3'/> [Amazon S3](http://aws.amazon.com/s3) – Cloud Storage
-- <img width='25' height='25' src='https://img.stackshare.io/service/43/kQ_6nwmP.jpg' alt='Twilio SendGrid'/> [Twilio SendGrid](http://sendgrid.com) – Transactional Email
-- <img width='25' height='25' src='https://img.stackshare.io/service/44/ICON_MAILGUN_NOFX.png' alt='Mailgun'/> [Mailgun](http://mailgun.com) – Transactional Email
-- <img width='25' height='25' src='https://img.stackshare.io/service/97/eW6tXeq3.png' alt='Stripe'/> [Stripe](https://stripe.com) – Payment Services
-- <img width='25' height='25' src='https://img.stackshare.io/service/103/default_193410db3a7e419c7b436961bf41d733c7346b59.png' alt='New Relic'/> [New Relic](http://newrelic.com) – Performance Monitoring
-- <img width='25' height='25' src='https://img.stackshare.io/service/133/3wgIDj3j.png' alt='Heroku'/> [Heroku](https://www.heroku.com) – Platform as a Service
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/989/ruby.png' alt='Ruby'/> [Ruby](https://www.ruby-lang.org) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'/> [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'/> [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/990/x57_Lorv.png' alt='Rails'/> [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
+- <img width='25' height='25' src='https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png' alt='Tailwind CSS'/> [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/25/amazon-s3.png' alt='Amazon S3'/> [Amazon S3](http://aws.amazon.com/s3) – Cloud Storage
 - <img width='25' height='25' src='https://img.stackshare.io/service/1028/ASOhU5xJ.png' alt='PostgreSQL'/> [PostgreSQL](http://www.postgresql.org/) – Databases
 - <img width='25' height='25' src='https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png' alt='Redis'/> [Redis](http://redis.io/) – In-Memory Databases
-- <img width='25' height='25' src='https://img.stackshare.io/service/1055/favicon.png' alt='Puma'/> [Puma](http://puma.io/) – Web Servers
 - <img width='25' height='25' src='https://img.stackshare.io/service/1078/4b7277462dadad85454ab427ce3f0ca7.png' alt='Sidekiq'/> [Sidekiq](http://sidekiq.org/) – Background Processing
-- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/2595/capybara.png' alt='Capybara'/> [Capybara](http://jnicklas.github.io/capybara/) – Testing Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/25166/default_2dcc9286a150737a14625d18f6f93747f72be430.png' alt='Esbuild'/> [Esbuild](https://esbuild.github.io/) – JS Build Tools / JS Task Runners
+- <img width='25' height='25' src='https://img.stackshare.io/service/103/default_193410db3a7e419c7b436961bf41d733c7346b59.png' alt='New Relic'/> [New Relic](http://newrelic.com) – Performance Monitoring
+- <img width='25' height='25' src='https://img.stackshare.io/service/1055/favicon.png' alt='Puma'/> [Puma](http://puma.io/) – Web Servers
+- <img width='25' height='25' src='https://img.stackshare.io/service/5848/44mC-kJ3.jpg' alt='Yarn'/> [Yarn](https://yarnpkg.com/) – Front End Package Manager
+- <img width='25' height='25' src='https://img.stackshare.io/service/133/3wgIDj3j.png' alt='Heroku'/> [Heroku](https://www.heroku.com) – Platform as a Service
+- <img width='25' height='25' src='https://img.stackshare.io/service/44/ICON_MAILGUN_NOFX.png' alt='Mailgun'/> [Mailgun](http://mailgun.com) – Transactional Email
+- <img width='25' height='25' src='https://img.stackshare.io/service/97/eW6tXeq3.png' alt='Stripe'/> [Stripe](https://stripe.com) – Payment Services
+- <img width='25' height='25' src='https://img.stackshare.io/service/43/kQ_6nwmP.jpg' alt='Twilio SendGrid'/> [Twilio SendGrid](http://sendgrid.com) – Transactional Email
 - <img width='25' height='25' src='https://img.stackshare.io/service/1432/devise.png' alt='Devise'/> [Devise](https://github.com/plataformatec/devise) – User Management and Authentication
 - <img width='25' height='25' src='https://img.stackshare.io/service/1433/omniauth.png' alt='OmniAuth'/> [OmniAuth](https://github.com/intridea/omniauth) – User Management and Authentication
-- <img width='25' height='25' src='https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png' alt='Autoprefixer'/> [Autoprefixer](https://github.com/postcss/autoprefixer) – CSS Pre-processors / Extensions
-- <img width='25' height='25' src='https://img.stackshare.io/service/2595/capybara.png' alt='Capybara'/> [Capybara](http://jnicklas.github.io/capybara/) – Testing Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/3339/rlFcjEdI.png' alt='PostCSS'/> [PostCSS](https://github.com/postcss/postcss) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png' alt='Shell'/> [Shell](https://en.wikipedia.org/wiki/Shell_script) – Shells
-- <img width='25' height='25' src='https://img.stackshare.io/service/5848/44mC-kJ3.jpg' alt='Yarn'/> [Yarn](https://yarnpkg.com/) – Front End Package Manager
-- <img width='25' height='25' src='https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png' alt='Tailwind CSS'/> [Tailwind CSS](https://tailwindcss.com) – Front-End Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/25166/default_2dcc9286a150737a14625d18f6f93747f72be430.png' alt='Esbuild'/> [Esbuild](https://esbuild.github.io/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
 
@@ -66,7 +66,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [martin-creator/fas-job-board](https://github.com/martin-creator/fas-job-board)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|53<br/>Tools used|02/04/24 <br/>Report generated|
+|53<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
